@@ -1,7 +1,8 @@
+import os
+import sys
 import pytest
 import pathlib
 import platform
-import nbimporter
 import pickle as pkl
 import pandas as pd
 from pandas.testing import assert_frame_equal
@@ -10,9 +11,19 @@ from spacy.lang.en import English
 from pandas import DataFrame
 from dataclasses import dataclass
 
-from preprocessing import (extract_text, clean_text,
-                           process_text, to_dataframe,
-                           customize_tokenizer)
+from nbimport import find_notebook, NotebookLoader
+
+
+nb_path = find_notebook('preprocessing')
+loader = NotebookLoader(nb_path)
+nb_module = loader.load_module('preprocessing')
+
+extract_text = nb_module.extract_text
+clean_text = nb_module.clean_text
+process_text = nb_module.process_text
+extract_text = nb_module.extract_text
+to_dataframe = nb_module.to_dataframe
+customize_tokenizer = nb_module.customize_tokenizer
 
 
 @dataclass
@@ -63,7 +74,6 @@ def assert_equal_docs(test_doc, target_doc):
 
 def test_extract_text(shared):
     test_text = extract_text(shared.html_content)
-    # assert test_text[:476] + test_text[-576:] == shared.noisy_target_text
     assert test_text == shared.noisy_target_text
    
    
