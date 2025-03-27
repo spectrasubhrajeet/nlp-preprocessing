@@ -659,10 +659,9 @@ sent_id,token_id,text,lemma,pos,ent
 14,5,.,.,NOUN,
 14,6,[,[,NOUN,
 15,0,AtjWH,atjwh,NOUN,ORG
-15,1, , ,SPACE,
-15,2,SBPbslZoU,sbpbslzou,NOUN,
-15,3,],],NOUN,
-15,4,.,.,NOUN,
+15,1,SBPbslZoU,sbpbslzou,NOUN,
+15,2,],],NOUN,
+15,3,.,.,NOUN,
 16,0,tYZ,tyz,NOUN,PERSON
 16,1,YbiN,ybin,NOUN,PERSON
 16,2,qLe,qle,NOUN,PERSON
@@ -677,7 +676,6 @@ sent_id,token_id,text,lemma,pos,ent
 17,5,.,.,NOUN,
 17,6,[,[,NOUN,
 18,0,FIpza,fipza,NOUN,ORG
-18,1, , ,SPACE,
-18,2,dysmbnLdg,dysmbnldg,NOUN,
-18,3,],],NOUN,
-18,4,.,.,NOUN,
+18,1,dysmbnLdg,dysmbnldg,NOUN,
+18,2,],],NOUN,
+18,3,.,.,NOUN,
